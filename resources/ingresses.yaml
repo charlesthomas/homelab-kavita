@@ -1,0 +1,24 @@
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: kavita
+  namespace: kavita
+  annotations:
+    external-dns.alpha.kubernetes.io/hostname: kavita.crt.house
+spec:
+  ingressClassName: nginx-internal
+  rules:
+    - host: "kavita.crt.house"
+      http:
+        paths:
+          - path: "/"
+            pathType: Prefix
+            backend:
+              service:
+                name: kavita
+                port:
+                  number: 5000
+  tls:
+    - hosts:
+      - kavita.crt.house
