@@ -1,0 +1,45 @@
+_commit: v1.12.1-9-g5863ce6
+_src_path: /Users/crthomas/code/charlesthomas/homelab-template
+additionalResources: ''
+backups: false
+helm: false
+homepageDescription: eBook Library
+homepageEnabled: true
+homepageGroup: Media
+homepageIcon: kavita
+homepageName: Kavita
+ingClass: nginx-internal
+ingCname: ''
+ingExtraAnnotations: ''
+ingHost: kavita.crt.house
+ingName: kavita
+ingPathType: Prefix
+ingWebSockets: false
+ingress: true
+labels: 'app: kavita'
+name: kavita
+namespace: kavita
+pvc: true
+pvcAccessMode: ReadWriteMany
+pvcName: kavita
+pvcSize: 5Gi
+pvcStorageClass: longhorn-retain
+reloader: false
+resources:
+- deployments.yaml
+- ingresses.yaml
+- pvcs.yaml
+- service-accounts.yaml
+- services.yaml
+service: true
+serviceAccount: true
+svcAccountName: kavita
+svcName: kavita
+svcPortName: http
+svcPortNum: 5000
+svcProtocol: TCP
+svcSelector: 'app: kavita'
+svcTargetPort: http
+svcType: ClusterIP
+upstreamURL: https://www.kavitareader.com/
+url: https://github.com/charlesthomas/homelab-kavita
