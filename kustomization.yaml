@@ -25,7 +25,7 @@ patches:
       annotations:
         gethomepage.dev/href: https://kavita.crt.house
         gethomepage.dev/enabled: "true"
-        gethomepage.dev/description: eBook Library
+        gethomepage.dev/description: eBook Manager
         gethomepage.dev/group: Media
         gethomepage.dev/icon: kavita
         gethomepage.dev/name: Kavita
