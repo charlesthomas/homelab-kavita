@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: kavita
-          image: linuxserver/kavita:0.8.3
+          image: linuxserver/kavita:0.8.4
           imagePullPolicy: IfNotPresent
           ports:
             - name: http
