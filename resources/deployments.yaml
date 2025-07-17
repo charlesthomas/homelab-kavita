@@ -4,7 +4,6 @@ metadata:
   name: kavita
   namespace: kavita
 spec:
-  replicas: 1
   selector:
     matchLabels:
       app: kavita
