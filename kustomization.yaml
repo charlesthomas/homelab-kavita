@@ -5,8 +5,10 @@ namespace: kavita
 
 commonAnnotations:
   repo: https://github.com/charlesthomas/homelab-kavita
-commonLabels:
-  app: kavita
+labels:
+- includeSelectors: true
+  pairs:
+    app: kavita
 
 resources:
 - resources/deployments.yaml
@@ -32,3 +34,11 @@ patches:
         gethomepage.dev/pod-selector: ""
   target:
     kind: Ingress
+configMapGenerator:
+- name: grafana-dashboard-kavita
+  files:
+  - grafana/kavita.json
+  options:
+    disableNameSuffixHash: true
+    labels:
+      grafana_dashboard: "1"
