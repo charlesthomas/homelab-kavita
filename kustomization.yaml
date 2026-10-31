@@ -5,8 +5,10 @@ namespace: kavita
 
 commonAnnotations:
   repo: https://github.com/charlesthomas/homelab-kavita
-commonLabels:
-  app: kavita
+labels:
+- includeSelectors: true
+  pairs:
+    app: kavita
 
 resources:
 - resources/deployments.yaml
